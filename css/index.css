@@ -1,21 +1,25 @@
 *{
 	box-sizing: border-box;
+	color: #EFEDE9;
  }
 
 body{
 	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 	font-size: 14px;
+	background: #1A1D25;
 }
 
 header{
+	background: url("../img/bg-top.jpg") center / cover no-repeat;
 	background-color: #333;
-	height: 3em;
+	height: 8em;
 	color: #FFF;
 	margin-bottom: 1em;
 }
 
 header h1{
-	font-size: 2em;
+	font-size: 3em;
+	font-weight: 500;
 	display:inline-block;
 	vertical-align:	middle;
 }
@@ -44,18 +48,20 @@ section{
 }
 
 section h2{
-	font-size: 3em;
+	color: #23E38B;
+	font-size: 2em;
 	display: block;
-	padding-bottom: .5em;
-	border-bottom: 1px solid #ccc;
-	margin-bottom: .5em;
+	padding: 1em 0;
 }
 
 table{
 	width: 100%;
 	margin-bottom : .5em;
     table-layout: fixed;
+}
 
+tr{
+	height: 75px;
 }
 
 td, th {
@@ -63,11 +69,17 @@ td, th {
 	margin: 0;
 	border: 1px solid #ccc;
 	text-align: center;
+	vertical-align: middle;
+	border-top: 1px solid rgba(234, 233, 238, .3);
+	border-bottom: 1px solid rgba(234, 233, 238, .3);
+	border-left: none;
+	border-right: none;
 }
 
 th{
+	color: #898A93;
 	font-weight: bold;
-	background-color: #EEE;
+	border: ;
 }
 
 label{
