@@ -18,15 +18,17 @@ for (var i = 0; i < pacientes.length; i++) {
     var alturaValida = true;
 
     if (peso <= 0 || peso >= 1000) {
-        console.log("Peso Inválido!");
         pesoValido = false;
+        console.log("Peso Inválido!");
         tdPeso.textContent = "Peso inválido!";
+        paciente.classList.add('paciente-invalido'); // adiciona uma classe no css.
     }
-
+    
     if (altura <= 0 || altura >= 3.00) {
         alturaValida = false;
         console.log("Altura Inválida!");
         tdAltura.textContent = "Altura inválida!";
+        paciente.classList.add('paciente-invalido');
     }
 
     if (pesoValido && alturaValida) {
