@@ -148,3 +148,7 @@ button[disabled=disabled], button:disabled {
 .paciente-invalido{
 	background-color: orange;
 }
+
+.form-adiciona input{
+	color: #1A1D25;
+}
