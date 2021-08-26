@@ -14,17 +14,18 @@ for (var i = 0; i < pacientes.length; i++) {
     var peso = tdPeso.textContent;
     var altura = tdAltura.textContent;
 
-    var pesoValido = true;
-    var alturaValida = true;
+    var pesoValido = validaPeso(peso); //recebe true ou false
+    var alturaValida = validaAltura(altura); //recebe true ou false
 
-    if (peso <= 0 || peso >= 1000) {
+    // se o peso for válido ele entra nesse if
+    if (!pesoValido) {
         pesoValido = false;
         console.log("Peso Inválido!");
         tdPeso.textContent = "Peso inválido!";
         paciente.classList.add('paciente-invalido'); // adiciona uma classe no css.
     }
 
-    if (altura <= 0 || altura >= 3.00) {
+    if (!alturaValida) {
         alturaValida = false;
         console.log("Altura Inválida!");
         tdAltura.textContent = "Altura inválida!";
@@ -34,6 +35,22 @@ for (var i = 0; i < pacientes.length; i++) {
     if (pesoValido && alturaValida) {
         var imc = calculaImc(peso,altura);
         tdImc.textContent = imc;
+    }
+}
+
+function validaPeso(peso){
+    if(peso >= 0 && peso <= 1000){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+function validaAltura(altura){
+    if(altura >= 0 && altura <= 3.0){
+        return true;
+    }else{
+        return false;
     }
 }
 
